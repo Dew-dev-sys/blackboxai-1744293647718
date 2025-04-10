@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Rambling Vile</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="font-poppins bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-md">
+            <div class="p-4">
+                <a href="/" class="flex items-center space-x-2">
+                    <span class="font-playfair text-xl font-bold text-gray-800">Rambling Vile</span>
+                </a>
+            </div>
+            <nav class="mt-4">
+                <a href="#" class="flex items-center px-4 py-3 bg-indigo-50 text-indigo-700">
+                    <i class="fas fa-home w-5"></i>
+                    <span class="ml-2">Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-edit w-5"></i>
+                    <span class="ml-2">Posts</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-photo-video w-5"></i>
+                    <span class="ml-2">Media</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-book w-5"></i>
+                    <span class="ml-2">E-Books</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-file-pdf w-5"></i>
+                    <span class="ml-2">PDFs</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-user w-5"></i>
+                    <span class="ml-2">Profile</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-cog w-5"></i>
+                    <span class="ml-2">Settings</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 overflow-hidden">
+            <!-- Top Navigation -->
+            <div class="bg-white shadow-sm">
+                <div class="flex items-center justify-between px-6 py-4">
+                    <h1 class="text-2xl font-semibold text-gray-800">Dashboard</h1>
+                    <div class="flex items-center space-x-4">
+                        <button class="text-gray-600 hover:text-gray-900">
+                            <i class="fas fa-bell text-xl"></i>
+                        </button>
+                        <div class="relative">
+                            <button class="flex items-center space-x-2">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=32" 
+                                     alt="Profile" 
+                                     class="w-8 h-8 rounded-full object-cover">
+                                <span class="text-gray-700">John Doe</span>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="p-6">
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-indigo-50 rounded-full">
+                                <i class="fas fa-edit text-indigo-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Total Posts</h2>
+                                <p class="text-2xl font-semibold text-gray-800">24</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-green-50 rounded-full">
+                                <i class="fas fa-eye text-green-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Total Views</h2>
+                                <p class="text-2xl font-semibold text-gray-800">12.5K</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-purple-50 rounded-full">
+                                <i class="fas fa-photo-video text-purple-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Media Files</h2>
+                                <p class="text-2xl font-semibold text-gray-800">143</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-yellow-50 rounded-full">
+                                <i class="fas fa-users text-yellow-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Followers</h2>
+                                <p class="text-2xl font-semibold text-gray-800">1.2K</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Posts & Quick Actions -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Recent Posts -->
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 border-b border-gray-100">
+                            <h2 class="text-xl font-semibold text-gray-800">Recent Posts</h2>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-6">
+                                <div class="flex items-center">
+                                    <img src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=64" 
+                                         alt="Post" 
+                                         class="w-16 h-16 rounded object-cover">
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-semibold text-gray-800">The Art of Creative Writing</h3>
+                                        <p class="text-gray-600">Published 2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=64" 
+                                         alt="Post" 
+                                         class="w-16 h-16 rounded object-cover">
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-semibold text-gray-800">Photography Essentials</h3>
+                                        <p class="text-gray-600">Published 5 days ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 border-b border-gray-100">
+                            <h2 class="text-xl font-semibold text-gray-800">Quick Actions</h2>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid grid-cols-2 gap-4">
+                                <button class="p-4 border-2 border-dashed border-gray-200 rounded-lg hover:border-indigo-500 hover:text-indigo-500 transition-colors duration-300">
+                                    <i class="fas fa-plus-circle text-2xl mb-2"></i>
+                                    <p>Create Post</p>
+                                </button>
+                                <button class="p-4 border-2 border-dashed border-gray-200 rounded-lg hover:border-indigo-500 hover:text-indigo-500 transition-colors duration-300">
+                                    <i class="fas fa-upload text-2xl mb-2"></i>
+                                    <p>Upload Media</p>
+                                </button>
+                                <button class="p-4 border-2 border-dashed border-gray-200 rounded-lg hover:border-indigo-500 hover:text-indigo-500 transition-colors duration-300">
+                                    <i class="fas fa-book text-2xl mb-2"></i>
+                                    <p>Add E-Book</p>
+                                </button>
+                                <button class="p-4 border-2 border-dashed border-gray-200 rounded-lg hover:border-indigo-500 hover:text-indigo-500 transition-colors duration-300">
+                                    <i class="fas fa-file-pdf text-2xl mb-2"></i>
+                                    <p>Upload PDF</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
