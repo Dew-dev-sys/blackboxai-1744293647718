@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Content - Rambling Vile</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .upload-area {
+            border: 2px dashed #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .upload-area:hover {
+            border-color: #6366f1;
+        }
+    </style>
+</head>
+<body class="font-poppins bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar (same as dashboard) -->
+        <div class="w-64 bg-white shadow-md">
+            <div class="p-4">
+                <a href="/" class="flex items-center space-x-2">
+                    <span class="font-playfair text-xl font-bold text-gray-800">Rambling Vile</span>
+                </a>
+            </div>
+            <nav class="mt-4">
+                <a href="dashboard.html" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-home w-5"></i>
+                    <span class="ml-2">Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-edit w-5"></i>
+                    <span class="ml-2">Posts</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 bg-indigo-50 text-indigo-700">
+                    <i class="fas fa-photo-video w-5"></i>
+                    <span class="ml-2">Media</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-book w-5"></i>
+                    <span class="ml-2">E-Books</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-file-pdf w-5"></i>
+                    <span class="ml-2">PDFs</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-user w-5"></i>
+                    <span class="ml-2">Profile</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50">
+                    <i class="fas fa-cog w-5"></i>
+                    <span class="ml-2">Settings</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 overflow-hidden">
+            <!-- Top Navigation -->
+            <div class="bg-white shadow-sm">
+                <div class="flex items-center justify-between px-6 py-4">
+                    <h1 class="text-2xl font-semibold text-gray-800">Upload Content</h1>
+                    <div class="flex items-center space-x-4">
+                        <button class="text-gray-600 hover:text-gray-900">
+                            <i class="fas fa-bell text-xl"></i>
+                        </button>
+                        <div class="relative">
+                            <button class="flex items-center space-x-2">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=32" 
+                                     alt="Profile" 
+                                     class="w-8 h-8 rounded-full object-cover">
+                                <span class="text-gray-700">John Doe</span>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upload Content -->
+            <div class="p-6">
+                <!-- Upload Types -->
+                <div class="mb-6">
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6">
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 text-sm font-medium text-indigo-700 bg-indigo-50 rounded-md">
+                                    All Files
+                                </button>
+                                <button class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-md">
+                                    Videos
+                                </button>
+                                <button class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-md">
+                                    Music
+                                </button>
+                                <button class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-md">
+                                    Photos
+                                </button>
+                                <button class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-md">
+                                    E-Books
+                                </button>
+                                <button class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-md">
+                                    PDFs
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upload Area -->
+                <div class="bg-white rounded-lg shadow">
+                    <div class="p-6">
+                        <div class="upload-area p-8 rounded-lg text-center">
+                            <input type="file" class="hidden" id="fileInput" multiple>
+                            <label for="fileInput" class="cursor-pointer">
+                                <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Drag & Drop files here</h3>
+                                <p class="text-gray-500 mb-4">or click to browse</p>
+                                <button class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition duration-300">
+                                    Choose Files
+                                </button>
+                            </label>
+                        </div>
+
+                        <!-- Upload Rules -->
+                        <div class="mt-6">
+                            <h4 class="text-sm font-semibold text-gray-800 mb-2">Upload Rules:</h4>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    Maximum file size: 500MB for videos, 50MB for other files
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    Supported formats: MP4, MP3, JPG, PNG, PDF, EPUB
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    Content must comply with our community guidelines
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Uploads -->
+                <div class="mt-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Recent Uploads</h2>
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6">
+                            <div class="space-y-4">
+                                <!-- Upload Item -->
+                                <div class="flex items-center justify-between p-4 border border-gray-100 rounded-lg">
+                                    <div class="flex items-center space-x-4">
+                                        <i class="fas fa-video text-2xl text-indigo-500"></i>
+                                        <div>
+                                            <h4 class="text-gray-800 font-medium">intro-video.mp4</h4>
+                                            <p class="text-sm text-gray-500">48.2 MB • Uploaded 2 minutes ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="text-gray-400 hover:text-gray-600">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button class="text-gray-400 hover:text-gray-600">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Upload Item -->
+                                <div class="flex items-center justify-between p-4 border border-gray-100 rounded-lg">
+                                    <div class="flex items-center space-x-4">
+                                        <i class="fas fa-image text-2xl text-green-500"></i>
+                                        <div>
+                                            <h4 class="text-gray-800 font-medium">cover-image.jpg</h4>
+                                            <p class="text-sm text-gray-500">2.8 MB • Uploaded 5 minutes ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="text-gray-400 hover:text-gray-600">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button class="text-gray-400 hover:text-gray-600">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple drag and drop functionality
+        const uploadArea = document.querySelector('.upload-area');
+        
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            uploadArea.classList.add('border-indigo-500');
+        }
+
+        function unhighlight(e) {
+            uploadArea.classList.remove('border-indigo-500');
+        }
+
+        uploadArea.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+
+        function handleFiles(files) {
+            // Here you would typically upload the files to your server
+            // For now, we'll just log them
+            console.log(files);
+        }
+    </script>
+</body>
+</html>
